@@ -51,6 +51,9 @@ public class ErrorPageController {
         log.info("ERROR_REQUEST_URI: {}", request.getAttribute(ERROR_REQUEST_URI));
         log.info("ERROR_SERVLET_NAME: {}", request.getAttribute(ERROR_SERVLET_NAME));
         log.info("ERROR_STATUS_CODE: {}", request.getAttribute(ERROR_STATUS_CODE));
+        // 오류가 발생하면 오류 페이지를 출력하기 위해 WAS 내부에서 다시 한번 호출이 발생하므로
+        // 클라이언트로 부터 발생한 정상 요청인지, 아니면 오류 페이지를 출력하기 위한 내부 요청인지 구분할 수 있도록 dispatchType을 제공함
+        // 클라이언트로 부터 발생한 정상 요청은 dispatchType=REQUEST, 오류 페이지를 출력하기 위한 내부 요청은 dispatchType=ERROR
         log.info("dispatchType: {}", request.getDispatcherType());
     }
 }
