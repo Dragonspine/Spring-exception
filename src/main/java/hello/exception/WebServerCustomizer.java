@@ -1,5 +1,6 @@
 package hello.exception;
 
+import org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController;
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.boot.web.server.ErrorPage;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
@@ -17,7 +18,7 @@ import org.springframework.stereotype.Component;
  * -----------------------------------------------------------
  * 2022/09/27        kanghyun Kim      최초 생성
  */
-@Component
+//@Component
 public class WebServerCustomizer implements WebServerFactoryCustomizer<ConfigurableWebServerFactory> {
 
     /**
