@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * date           : 2022/09/29
  * description    : 스프링 부트가 기본으로 제공하는 ExceptionResolver
  *                  1. ExceptionHandlerExceptionResolver
- *                  2. ResponseStatusExceptionResolver
- *                  3. DefaultHandlerExceptionResolver
+ *                  2. ResponseStatusExceptionResolver : HTTP 응답 코드 변경
+ *                  3. DefaultHandlerExceptionResolver : 스프링 내부 예외 처리
  * ===========================================================
  * DATE              AUTHOR             NOTE
  * -----------------------------------------------------------
