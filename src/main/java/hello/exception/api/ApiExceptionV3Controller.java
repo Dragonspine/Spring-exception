@@ -1,16 +1,13 @@
 package hello.exception.api;
 
 import hello.exception.exception.UserException;
-import hello.exception.exhandler.ErrorResult;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.ServletRequest;
-import java.util.Optional;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * packageName    : hello.exception.api
@@ -24,9 +21,9 @@ import java.util.Optional;
  * 2022/09/29        kanghyun Kim      최초 생성
  */
 @Slf4j
-@RequestMapping("/api2")
+@RequestMapping("/api3")
 @RestController
-public class ApiExceptionV2Controller {
+public class ApiExceptionV3Controller {
 
     @GetMapping("/members/{id}")
     public ApiExceptionController.MemberDto getMember(@PathVariable("id") String id) {
